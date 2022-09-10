@@ -1,0 +1,55 @@
+<!--
+  @File Name          : opportunityList.html
+  @Description        : 
+  @Author             : dkowalec@mdvip.com
+  @Group              : 
+  @Last Modified By   : dkowalec@mdvip.com
+  @Last Modified On   : 12/13/2019, 2:58:14 PM
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    12/13/2019   dkowalec@mdvip.com     Initial Version
+-->
+<template>
+  <lightning-card icon-name="standard:opportunity">
+    <h1 slot="title">Opportunities</h1>
+    <div class="slds-card__body slds-card__body_inner">
+      <lightning-combobox
+        name="progress"
+        label="Record Filter"
+        value={status}
+        placeholder="Select Progress"
+        options={picklistValues}
+        onchange={handleChange}
+      >
+      </lightning-combobox>
+      <div class="slds-tile__detail">
+        <ul class="slds-list_horizontal slds-has-dividers_right">
+          <li class="slds-item">Number of Records</li>
+          <li class="slds-item">{totalRecords}</li>
+        </ul>
+        <ul class="slds-list_horizontal slds-has-dividers_right">
+          <li class="slds-item">Total Amount</li>
+          <li class="slds-item">{amount}</li>
+        </ul>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+    <template if:true={dataRetrieved}>
+      <template for:each={displayedOpportunities} for:item="opp">
+        <div key={opp.Id}>
+          <c-opp-card
+            name={opp.Name}
+            stage={opp.StageName}
+            amount={opp.Amount}
+            close-date={opp.CloseDate}
+            opp-id={opp.Id}
+          >
+          </c-opp-card>
+        </div>
+      </template>
+      <template if:false={dataRetrieved}>
+        No records found
+      </template>
+    </template>
+  </lightning-card>
+</template>

@@ -1,0 +1,66 @@
+<!--
+  @File Name          : oppCard.html
+  @Description        : 
+  @Author             : dkowalec@mdvip.com
+  @Group              : 
+  @Last Modified By   : dkowalec@mdvip.com
+  @Last Modified On   : 12/13/2019, 11:04:50 AM
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    12/13/2019   dkowalec@mdvip.com     Initial Version
+-->
+<template>
+  <lightning-card variant="narrow" icon-name="standard:opportunity">
+    <h1 slot="title">{name}</h1>
+    <div class="slds-card__body slds-card__body_inner">
+      <!-- Body -->
+      <article class="slds-tile__detail">
+        <div class="slds-list_horizontal slds-wrap">
+          <dl class="slds-list_horizontal slds-wrap">
+            <dt
+              class="slds-item_label slds-text-color_weak"
+              title="First Label"
+            >
+              Stage:
+            </dt>
+            <dd
+              class="slds-item_detail slds-truncate"
+              title="Description for first label"
+            >
+              {stage}
+            </dd>
+            <dt
+              class="slds-item_label slds-text-color_weak"
+              title="Second Label"
+            >
+              Amount:
+            </dt>
+            <dd
+              class="slds-item_detail slds-truncate"
+              title="Description for second label"
+            >
+              {amount}
+            </dd>
+            <dt
+              class="slds-item_label slds-text-color_weak slds-truncate"
+              title="Second Label"
+            >
+              Close Date:
+            </dt>
+            <dd
+              class="slds-item_detail slds-truncate"
+              title="Description for second label"
+            >
+              {closeDate}
+            </dd>
+          </dl>
+        </div>
+        <!--<div slot="actions">-->
+        <!--<lightning-button-icon icon-name="utility:down"></lightning-button-icon>-->
+      </article>
+    </div>
+    <div slot="footer">
+      <h6>This is the footer</h6>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,48 @@
+/* MDVIP Colors:
+ * 
+ *  orange      #de6400
+ *  bronze      #664f3f
+ *  green       #969100
+ *  umber       #b09d84
+ *  taupe       #d9ccb3
+ *  white       #f1f1f1
+ *  black       #292929
+ *  
+ */
+
+.defaultStyle {
+  font-family: "Times New Roman", Times, serif;
+  background-color: lightblue;
+  border-color: yellow;
+  border-width: 2px;
+  border-style: solid;
+}
+
+div {
+  font-family: "Times New Roman", Times, serif;
+  background-color: lightblue;
+  border-color: yellow;
+  border-width: 2px;
+  border-style: solid;
+}
+/*
+.box .header {
+    background-color: #f9ecdd;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f9ecdd), to(#f6e5d1));
+    background-image: -webkit-linear-gradient(top, #f9ecdd, #f6e5d1);
+    background-image: -moz-linear-gradient(top, #f9ecdd, #f6e5d1);
+    background-image: -o-linear-gradient(top, #f9ecdd, #f6e5d1);
+    background-image: linear-gradient(to bottom, #f9ecdd, #f6e5d1);
+    border: 1px solid #baaea6;
+    border-bottom: 1px solid #cfc2b9;
+    -webkit-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, .4);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, .4);
+    width: 100%;
+    margin: 0px;
+    position: relative;
+    z-index: 2;
+    height: auto;
+}
+*/
