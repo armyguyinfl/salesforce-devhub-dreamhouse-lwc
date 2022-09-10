@@ -1,0 +1,51 @@
+<!--
+  @File Name          : formToggle.html
+  @Description        : 
+  @Author             : dkowalec@mdvip.com
+  @Group              : 
+  @Last Modified By   : dkowalec@mdvip.com
+  @Last Modified On   : 12/12/2019, 4:30:34 PM
+  @Modification Log   : 
+  Ver       Date            Author          Modification
+  1.0    12/12/2019   dkowalec@mdvip.com    Initial Version
+-->
+<template>
+  <template if:true={editMode}>
+    <!-- edit mode -->
+    <div class="GenWatt2">
+      <h2>Daniel's Form Toggle Edit Mode</h2>
+      <lightning-button
+        label="View"
+        title="View"
+        onclick={handleChange}
+        class="slds-m-left_x-small"
+      ></lightning-button>
+      <div class="slds-m-vertical_medium">
+        <c-opp-record-form
+          mode="edit"
+          record-id={recordId}
+          oncancel={handleCancel}
+          onsuccess={handleSave}
+        ></c-opp-record-form>
+      </div>
+    </div>
+  </template>
+  <template if:false={editMode}>
+    <!-- view mode -->
+    <div class="GenWatt2">
+      <h2>Daniel's Form Toggle View Mode</h2>
+      <lightning-button
+        label="Edit"
+        title="Edit"
+        onclick={handleChange}
+        class="slds-m-left_x-small"
+      ></lightning-button>
+      <div class="slds-m-vertical_medium">
+        <c-opp-record-form
+          mode="readonly"
+          record-id={recordId}
+        ></c-opp-record-form>
+      </div>
+    </div>
+  </template>
+</template>
